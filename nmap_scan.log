@@ -1,0 +1,51 @@
+2025-02-27 23:14:33,661 - INFO - Starting Nmap scan: target=https://prosign.prostructproposal.com, arguments=-F
+2025-02-27 23:14:33,702 - INFO - Scan completed for https://prosign.prostructproposal.com: {'target': 'https://prosign.prostructproposal.com', 'state': 'unknown', 'open_ports': []}
+2025-02-27 23:15:04,236 - INFO - /app/ZeroVuln/views.py changed, reloading.
+2025-02-27 23:15:12,173 - INFO - /app/ZeroVuln/views.py changed, reloading.
+2025-02-27 23:15:24,802 - INFO - Starting Nmap scan: target=https://prosign.prostructproposal.com, arguments=-F
+2025-02-27 23:15:24,954 - INFO - Scan completed for https://prosign.prostructproposal.com: {'target': 'https://prosign.prostructproposal.com', 'state': 'unknown', 'open_ports': []}
+2025-02-27 23:15:43,192 - INFO - /app/ZeroVuln/views.py changed, reloading.
+2025-02-27 23:15:44,903 - INFO - /app/ZeroVuln/views.py changed, reloading.
+2025-02-27 23:16:00,572 - INFO - Starting Nmap scan: target=https://prosign.prostructproposal.com, arguments=-F
+2025-02-27 23:16:00,617 - INFO - []
+2025-02-27 23:16:00,618 - INFO - Scan completed for https://prosign.prostructproposal.com: {'target': 'https://prosign.prostructproposal.com', 'state': 'unknown', 'open_ports': []}
+2025-02-27 23:16:44,082 - INFO - /app/ZeroVuln/views.py changed, reloading.
+2025-02-27 23:16:51,607 - INFO - Starting Nmap scan: target=https://prosign.prostructproposal.com, arguments=-F
+2025-02-27 23:16:51,656 - INFO - <nmap.nmap.PortScanner object at 0x7f10632d7790>
+2025-02-27 23:16:51,657 - INFO - Scan completed for https://prosign.prostructproposal.com: {'target': 'https://prosign.prostructproposal.com', 'state': 'unknown', 'open_ports': []}
+2025-02-27 23:17:41,643 - INFO - /app/ZeroVuln/views.py changed, reloading.
+2025-02-27 23:17:47,143 - INFO - /app/ZeroVuln/views.py changed, reloading.
+2025-02-27 23:17:49,855 - INFO - /app/ZeroVuln/views.py changed, reloading.
+2025-02-27 23:17:53,494 - INFO - Starting Nmap scan: target=https://prosign.prostructproposal.com, arguments=-F
+2025-02-27 23:17:53,532 - INFO - Scan completed for https://prosign.prostructproposal.com: {'target': 'https://prosign.prostructproposal.com', 'state': 'unknown', 'open_ports': []}
+2025-02-27 23:18:16,603 - INFO - /app/ZeroVuln/views.py changed, reloading.
+2025-02-27 23:18:23,567 - INFO - Starting Nmap scan: target=https://prosign.prostructproposal.com, arguments=-F
+2025-02-27 23:18:23,676 - ERROR - Unexpected error during scan: Object of type PortScanner is not JSON serializable
+Traceback (most recent call last):
+  File "/app/ZeroVuln/views.py", line 39, in scan_ports
+    print(json.dumps(scanner))  # List of scanned hosts
+          ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/json/__init__.py", line 231, in dumps
+    return _default_encoder.encode(obj)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/json/encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/json/encoder.py", line 258, in iterencode
+    return _iterencode(o, 0)
+           ^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/json/encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type PortScanner is not JSON serializable
+2025-02-27 23:18:23,683 - ERROR - Internal Server Error: /nmap/scan/
+2025-02-27 23:19:22,039 - INFO - /app/ZeroVuln/views.py changed, reloading.
+2025-02-27 23:19:35,099 - INFO - /app/ZeroVuln/views.py changed, reloading.
+2025-02-27 23:19:36,820 - INFO - /app/ZeroVuln/views.py changed, reloading.
+2025-02-27 23:19:40,091 - INFO - Starting Nmap scan: target=https://prosign.prostructproposal.com, arguments=-F
+2025-02-27 23:19:40,127 - INFO - Scan completed for https://prosign.prostructproposal.com: {'target': 'https://prosign.prostructproposal.com', 'state': 'unknown', 'open_ports': []}
+2025-02-27 23:20:16,024 - INFO - Starting Nmap scan: target=https://prosign.prostructproposal.com, arguments=-F
+2025-02-27 23:20:17,220 - INFO - Scan completed for https://prosign.prostructproposal.com: {'target': 'https://prosign.prostructproposal.com', 'state': 'unknown', 'open_ports': []}
+2025-02-27 23:20:43,505 - INFO - /app/ZeroVuln/views.py changed, reloading.
+2025-02-27 23:26:15,740 - INFO - Starting Nmap scan: target=prosign.prostructproposal.com, arguments=-F
+2025-02-27 23:26:21,470 - INFO - Scan completed for prosign.prostructproposal.com: {'target': 'prosign.prostructproposal.com', 'state': 'up', 'open_ports': [{'port': 80, 'state': 'open'}, {'port': 443, 'state': 'open'}]}
+2025-02-27 23:28:44,698 - INFO - /app/ZeroVuln/views.py changed, reloading.
