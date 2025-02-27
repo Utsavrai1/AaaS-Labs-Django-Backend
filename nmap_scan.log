@@ -63,3 +63,8 @@ TypeError: Object of type PortScanner is not JSON serializable
 2025-02-27 23:36:03,673 - WARNING - Not Found: /api/nmap/arguments
 2025-02-27 23:36:08,178 - WARNING - Not Found: /api/nmap/arguments/
 2025-02-27 23:37:14,469 - INFO - /app/AaaSLabs/urls.py changed, reloading.
+2025-02-27 23:37:18,864 - INFO - Fetched available Nmap arguments
+2025-02-27 23:39:05,634 - INFO - /app/ZeroVuln/views.py changed, reloading.
+2025-02-27 23:39:09,520 - INFO - /app/ZeroVuln/views.py changed, reloading.
+2025-02-27 23:39:13,035 - INFO - Fetched available Nmap arguments successfully
+2025-02-27 23:40:43,823 - INFO - /app/ZeroVuln/views.py changed, reloading.

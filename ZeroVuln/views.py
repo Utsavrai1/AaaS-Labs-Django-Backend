@@ -60,22 +60,71 @@ def scan_ports(request):
 @csrf_exempt
 def get_nmap_arguments(request):
     """
-    Returns all available Nmap arguments from the `nmap` command.
+    Returns all available Nmap arguments, categorized by type with descriptions.
     """
     if request.method != "GET":
         logger.warning("Invalid request method for /get_nmap_arguments/")
         return JsonResponse({"error": "Only GET method is allowed"}, status=405)
 
     try:
-        help_output = scanner.nmap_version()
-        arguments = [
-            "-sS", "-sT", "-sU", "-sN", "-sF", "-sX", "-sA", "-sW", "-sM",
-            "-Pn", "-PS", "-PA", "-PU", "-PY", "-PE", "-PP", "-PM",
-            "-sn", "-O", "-F", "-p", "-T0", "-T1", "-T2", "-T3", "-T4", "-T5"
-        ]  # A subset of common arguments
+        scanner = nmap.PortScanner()
+        nmap_version = scanner.nmap_version()
 
-        logger.info("Fetched available Nmap arguments")
-        return JsonResponse({"nmap_version": help_output, "supported_arguments": arguments})
+        # Categorized Nmap Arguments with Descriptions
+        nmap_arguments = {
+            "scan_types": {
+                "-sS": "TCP SYN scan (Stealth Scan)",
+                "-sT": "TCP Connect scan",
+                "-sU": "UDP scan",
+                "-sN": "TCP NULL scan (No flags set)",
+                "-sF": "TCP FIN scan",
+                "-sX": "TCP Xmas scan (FIN, PSH, URG set)",
+                "-sA": "TCP ACK scan",
+                "-sW": "TCP Window scan",
+                "-sM": "TCP Maimon scan"
+            },
+            "host_discovery": {
+                "-Pn": "Disable host discovery, scan all given targets",
+                "-PS": "TCP SYN Ping",
+                "-PA": "TCP ACK Ping",
+                "-PU": "UDP Ping",
+                "-PY": "SCTP INIT Ping",
+                "-PE": "ICMP Echo Request Ping",
+                "-PP": "ICMP Timestamp Request Ping",
+                "-PM": "ICMP Netmask Request Ping",
+                "-sn": "Ping Scan - Only discover hosts without port scan"
+            },
+            "timing_options": {
+                "-T0": "Paranoid (slowest, avoids detection)",
+                "-T1": "Sneaky (very slow, evades detection)",
+                "-T2": "Polite (reduces bandwidth, slow)",
+                "-T3": "Normal (default timing)",
+                "-T4": "Aggressive (faster, might alert firewalls)",
+                "-T5": "Insane (fastest, high network load)"
+            },
+            "port_options": {
+                "-F": "Fast scan (only scans 100 most common ports)",
+                "-p": "Specify port range (e.g., -p 80,443,8080)"
+            },
+            "OS_detection": {
+                "-O": "Enable OS detection"
+            },
+            "version_detection": {
+                "-sV": "Service version detection"
+            },
+            "script_scan": {
+                "-sC": "Run default Nmap scripts"
+            },
+            "traceroute": {
+                "--traceroute": "Trace network path to target"
+            },
+            "aggressive_scan": {
+                "-A": "Aggressive scan (OS, version detection, scripts, traceroute)"
+            }
+        }
+
+        logger.info("Fetched available Nmap arguments successfully")
+        return JsonResponse({"nmap_version": nmap_version, "supported_arguments": nmap_arguments})
 
     except Exception as e:
         logger.exception(f"Failed to fetch Nmap arguments: {str(e)}")
