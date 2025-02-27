@@ -26,11 +26,13 @@ SECRET_KEY = 'django-insecure-cny$7l0ukv)8maz8ca@st%yg++dn5c*de2!7xvnftrl6v0+rm(
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = "True"
 
-ALLOWED_HOSTS = ["https://aaas-labs-django-backend.onrender.com", "localhost:8000"]
-
+ALLOWED_HOSTS = [
+    "localhost",
+    "127.0.0.1",
+    "aaas-labs-django-backend.onrender.com",
+]
 
 # Application definition
-
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
