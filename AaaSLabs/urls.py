@@ -19,5 +19,5 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('zerovuln/', include('ZeroVuln.urls')),
+    path('api/nmap/', include('ZeroVuln.urls')),
 ]
