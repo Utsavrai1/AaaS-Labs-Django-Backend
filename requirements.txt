@@ -1,0 +1,4 @@
+Django
+python-nmap
+psycopg
+psycopg2-binary
