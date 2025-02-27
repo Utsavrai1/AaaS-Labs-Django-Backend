@@ -25,27 +25,24 @@ def scan_ports(request):
         return JsonResponse({"error": "Only POST method is allowed"}, status=405)
 
     try:
+        # Parse JSON request body
         data = json.loads(request.body)
         target = data.get("target")
-        arguments = data.get("arguments", "-F")  # Default to Fast Scan if no arguments provided
+        arguments = data.get("arguments", "-F")  # Default: Fast Scan
 
         if not target:
             logger.error("Missing target parameter in request body")
             return JsonResponse({"error": "Target URL is required"}, status=400)
 
+        # Log the scan details
         logger.info(f"Starting Nmap scan: target={target}, arguments={arguments}")
         scanner.scan(target, arguments=arguments)
 
-        result = {"target": target, "state": "unknown", "open_ports": []}
+        # Return the full scan result
+        full_result = scanner._scan_result
 
-        for host in scanner.all_hosts():
-            result["state"] = scanner[host].state()
-            if "tcp" in scanner[host]:
-                for port, details in scanner[host]["tcp"].items():
-                    result["open_ports"].append({"port": port, "state": details["state"]})
-
-        logger.info(f"Scan completed for {target}: {result}")
-        return JsonResponse(result)
+        logger.info(f"Scan completed for {target}")
+        return JsonResponse(full_result, safe=False)  # Allow returning dict as response
 
     except json.JSONDecodeError:
         logger.error("Invalid JSON data received in request body")

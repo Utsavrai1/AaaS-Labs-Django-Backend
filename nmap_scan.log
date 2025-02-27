@@ -68,3 +68,30 @@ TypeError: Object of type PortScanner is not JSON serializable
 2025-02-27 23:39:09,520 - INFO - /app/ZeroVuln/views.py changed, reloading.
 2025-02-27 23:39:13,035 - INFO - Fetched available Nmap arguments successfully
 2025-02-27 23:40:43,823 - INFO - /app/ZeroVuln/views.py changed, reloading.
+2025-02-27 23:40:48,887 - INFO - Fetched available Nmap arguments successfully
+2025-02-27 23:41:35,179 - ERROR - Internal Server Error: /api/nmap/scan
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/utils/deprecation.py", line 131, in __call__
+    response = self.process_response(request, response)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/middleware/common.py", line 108, in process_response
+    return self.response_redirect_class(self.get_full_path_with_slash(request))
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/middleware/common.py", line 87, in get_full_path_with_slash
+    raise RuntimeError(
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to localhost:8000/api/nmap/scan/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+2025-02-27 23:41:45,528 - INFO - Starting Nmap scan: target=prosign.prostructproposal.com, arguments=-p
+2025-02-27 23:41:45,540 - ERROR - Nmap scan failed: "nmap: option requires an argument -- 'p'\nSee the output of nmap -h for a summary of options.\n"
+2025-02-27 23:41:45,541 - ERROR - Internal Server Error: /api/nmap/scan/
+2025-02-27 23:42:17,316 - INFO - Starting Nmap scan: target=prosign.prostructproposal.com, arguments=-F
+2025-02-27 23:42:21,673 - INFO - Scan completed for prosign.prostructproposal.com: {'target': 'prosign.prostructproposal.com', 'state': 'up', 'open_ports': [{'port': 80, 'state': 'open'}, {'port': 443, 'state': 'open'}]}
+2025-02-27 23:42:42,491 - INFO - Starting Nmap scan: target=prosign.prostructproposal.com, arguments=-sV
+2025-02-27 23:43:02,847 - INFO - Scan completed for prosign.prostructproposal.com: {'target': 'prosign.prostructproposal.com', 'state': 'up', 'open_ports': [{'port': 80, 'state': 'open'}, {'port': 443, 'state': 'open'}]}
+2025-02-27 23:45:38,617 - INFO - /app/ZeroVuln/views.py changed, reloading.
+2025-02-27 23:45:41,396 - INFO - /app/ZeroVuln/views.py changed, reloading.
+2025-02-27 23:45:45,758 - INFO - Starting Nmap scan: target=prosign.prostructproposal.com, arguments=-sV
+2025-02-27 23:46:05,184 - INFO - Scan completed for prosign.prostructproposal.com: {'66.33.60.66': {'hostnames': [{'name': 'prosign.prostructproposal.com', 'type': 'user'}], 'addresses': {'ipv4': '66.33.60.66'}, 'vendor': {}, 'status': {'state': 'up', 'reason': 'reset'}, 'tcp': {80: {'state': 'open', 'reason': 'syn-ack', 'name': 'tcpwrapped', 'product': '', 'version': '', 'extrainfo': '', 'conf': '8', 'cpe': ''}, 443: {'state': 'open', 'reason': 'syn-ack', 'name': 'tcpwrapped', 'product': '', 'version': '', 'extrainfo': '', 'conf': '8', 'cpe': ''}}}}
+2025-02-27 23:47:55,940 - INFO - /app/ZeroVuln/views.py changed, reloading.
