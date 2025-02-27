@@ -4,7 +4,6 @@ import logging
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 
-# Configure logging
 logger = logging.getLogger(__name__)
 logging.basicConfig(
     level=logging.INFO,
@@ -15,7 +14,6 @@ logging.basicConfig(
     ],
 )
 
-# Nmap scanner instance
 scanner = nmap.PortScanner()
 
 @csrf_exempt
@@ -42,7 +40,7 @@ def scan_ports(request):
         full_result = scanner._scan_result
 
         logger.info(f"Scan completed for {target}")
-        return JsonResponse(full_result, safe=False)  # Allow returning dict as response
+        return JsonResponse(full_result, safe=False)
 
     except json.JSONDecodeError:
         logger.error("Invalid JSON data received in request body")
