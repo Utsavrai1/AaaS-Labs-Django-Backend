@@ -56,3 +56,27 @@ def scan_ports(request):
     except Exception as e:
         logger.exception(f"Unexpected error during scan: {str(e)}")
         return JsonResponse({"error": f"Unexpected error: {str(e)}"}, status=500)
+
+@csrf_exempt
+def get_nmap_arguments(request):
+    """
+    Returns all available Nmap arguments from the `nmap` command.
+    """
+    if request.method != "GET":
+        logger.warning("Invalid request method for /get_nmap_arguments/")
+        return JsonResponse({"error": "Only GET method is allowed"}, status=405)
+
+    try:
+        help_output = scanner.nmap_version()
+        arguments = [
+            "-sS", "-sT", "-sU", "-sN", "-sF", "-sX", "-sA", "-sW", "-sM",
+            "-Pn", "-PS", "-PA", "-PU", "-PY", "-PE", "-PP", "-PM",
+            "-sn", "-O", "-F", "-p", "-T0", "-T1", "-T2", "-T3", "-T4", "-T5"
+        ]  # A subset of common arguments
+
+        logger.info("Fetched available Nmap arguments")
+        return JsonResponse({"nmap_version": help_output, "supported_arguments": arguments})
+
+    except Exception as e:
+        logger.exception(f"Failed to fetch Nmap arguments: {str(e)}")
+        return JsonResponse({"error": f"Failed to fetch Nmap arguments: {str(e)}"}, status=500)
