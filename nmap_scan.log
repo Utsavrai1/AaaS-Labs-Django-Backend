@@ -1,0 +1,40 @@
+2025-02-28 18:47:40,024 - WARNING - Not Found: /
+2025-02-28 18:47:40,454 - WARNING - Not Found: /favicon.ico
+2025-02-28 18:47:50,021 - WARNING - Not Found: /api/nmap/
+2025-02-28 18:47:57,522 - WARNING - Method Not Allowed (GET): /api/nmap/scan_vulnerability/
+2025-02-28 18:49:28,691 - ERROR - Internal Server Error: /api/nmap/scan_vulnerability/
+2025-02-28 18:50:24,121 - ERROR - Internal Server Error: /api/nmap/scan_vulnerability/
+2025-02-28 18:51:16,252 - INFO - /app/AaaSLabs/urls.py changed, reloading.
+2025-02-28 18:53:19,963 - INFO - /app/ZeroVuln/views.py changed, reloading.
+2025-02-28 18:53:26,235 - INFO - /app/ZeroVuln/urls.py changed, reloading.
+2025-02-28 18:53:30,110 - INFO - /app/ZeroVuln/urls.py changed, reloading.
+2025-02-28 18:54:01,290 - INFO - /app/Gobuster/urls.py changed, reloading.
+2025-02-28 18:54:22,440 - INFO - /app/Gobuster/views.py changed, reloading.
+2025-02-28 18:55:54,696 - WARNING - Not Found: /api/nmap/scan_vulnerability/
+2025-02-28 18:55:59,457 - WARNING - Not Found: /api/
+2025-02-28 18:56:06,712 - WARNING - Not Found: /api/gobuster/
+2025-02-28 18:56:27,650 - INFO - /app/Gobuster/urls.py changed, reloading.
+2025-02-28 18:56:30,305 - WARNING - Not Found: /api/gobuster/
+2025-02-28 18:56:45,256 - ERROR - Internal Server Error: /api/gobuster/scan/
+2025-02-28 19:27:45,396 - ERROR - Internal Server Error: /api/gobuster/scan/
+2025-03-04 14:23:32,265 - ERROR - Internal Server Error: /api/gobuster/scan/
+2025-03-04 14:38:50,287 - INFO - /app/Gobuster/views.py changed, reloading.
+2025-03-04 14:39:09,644 - INFO - Starting vulnerability scan for https://prostructengineering.com/
+2025-03-04 14:39:09,648 - INFO - Running Gobuster for https://prostructengineering.com/
+2025-03-04 14:39:09,746 - ERROR - Gobuster scan failed: Error: error on parsing arguments: wordlist file "/usr/share/wordlists/dirbuster/directory-list-2.3-small.txt" does not exist: stat /usr/share/wordlists/dirbuster/directory-list-2.3-small.txt: no such file or directory
+
+2025-03-04 14:39:09,747 - INFO - Vulnerability scan completed successfully
+2025-03-04 14:40:48,206 - INFO - /app/Gobuster/views.py changed, reloading.
+2025-03-04 14:40:57,311 - INFO - Starting vulnerability scan for https://prostructengineering.com/
+2025-03-04 14:40:57,313 - INFO - Running Gobuster for https://prostructengineering.com/
+2025-03-04 14:42:33,314 - INFO - Vulnerability scan completed successfully
+2025-03-04 14:43:59,781 - INFO - Starting vulnerability scan for https://prostructengineering.com/
+2025-03-04 14:43:59,781 - INFO - Running Gobuster for https://prostructengineering.com/
+2025-03-04 14:45:32,792 - INFO - Running Nikto scan
+2025-03-04 14:45:32,795 - INFO - Running Nikto scan on https://prostructengineering.com/
+2025-03-04 14:45:33,433 - WARNING - Nikto returned non-JSON output
+2025-03-04 14:45:33,434 - INFO - Running Nmap scan
+2025-03-04 14:47:41,015 - INFO - Running WPScan
+2025-03-04 14:47:50,656 - INFO - Vulnerability scan completed successfully
+2025-03-04 15:13:11,074 - INFO - /app/Gobuster/views.py changed, reloading.
+2025-03-04 15:13:14,400 - INFO - /app/Gobuster/views.py changed, reloading.

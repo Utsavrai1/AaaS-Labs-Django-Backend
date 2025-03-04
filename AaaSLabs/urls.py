@@ -20,4 +20,5 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/nmap/', include('ZeroVuln.urls')),
+    path('api/gobuster/', include('Gobuster.urls')),
 ]
