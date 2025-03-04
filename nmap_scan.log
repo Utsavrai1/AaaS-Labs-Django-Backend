@@ -38,3 +38,20 @@
 2025-03-04 14:47:50,656 - INFO - Vulnerability scan completed successfully
 2025-03-04 15:13:11,074 - INFO - /app/Gobuster/views.py changed, reloading.
 2025-03-04 15:13:14,400 - INFO - /app/Gobuster/views.py changed, reloading.
+2025-03-04 15:13:26,024 - INFO - Starting vulnerability scan for https://prostructengineering.com/
+2025-03-04 15:13:26,027 - INFO - Running Gobuster for https://prostructengineering.com/
+2025-03-04 15:14:59,325 - INFO - Running Nikto scan
+2025-03-04 15:14:59,325 - INFO - Running Nikto scan on https://prostructengineering.com/
+2025-03-04 15:14:59,678 - WARNING - Failed to read Nikto output: Expecting value: line 1 column 1 (char 0)
+2025-03-04 15:14:59,679 - INFO - Running Nmap scan
+2025-03-04 15:18:17,595 - INFO - Running WPScan
+2025-03-04 15:19:13,523 - INFO - Vulnerability scan completed successfully
+2025-03-04 15:46:09,652 - INFO - Starting vulnerability scan for https://tbbox.me/
+2025-03-04 15:46:09,659 - INFO - Running Gobuster for https://tbbox.me/
+2025-03-04 15:46:10,684 - ERROR - Gobuster scan failed: Error: the server returns a status code that matches the provided options for non existing urls. https://tbbox.me/4f72e603-5bf1-4fbf-af1b-967d5e0c6d4d => 200 (Length: 5198). To continue please exclude the status code or the length
+
+2025-03-04 15:46:10,686 - INFO - Running Nikto scan
+2025-03-04 15:46:10,687 - INFO - Running Nikto scan on https://tbbox.me/
+2025-03-04 15:46:11,076 - WARNING - Failed to read Nikto output: Expecting value: line 1 column 1 (char 0)
+2025-03-04 15:46:11,076 - INFO - Running Nmap scan
+2025-03-04 15:46:34,075 - INFO - Vulnerability scan completed successfully
