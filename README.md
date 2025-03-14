@@ -76,7 +76,7 @@ We used a combination of **backend, frontend, security, and automation tools**:
 - **Automating No-Code Workflows:** Designing a **flexible and scalable** security automation framework.
 - **Generating Actionable Flowcharts:** Ensuring AI-generated **step-by-step remediation guides** are clear and effective. -**Parallel Processing/Turn Around Time:** Reducing the GoBuster Turn Around time from 15 mins to less than 5 mins.
 
-## Overview
+## 🚀 Getting Started
 This is the Django Microservices for AaaSLabs, which provides a security scanning API with a single endpoint:
 
 ```
@@ -84,6 +84,45 @@ This is the Django Microservices for AaaSLabs, which provides a security scannin
 ```
 
 This endpoint generates a security report for a given domain.
+
+---
+
+## Project Structure
+```
+├── .gitignore
+├── AaaSLabs
+│   ├── __init__.py
+│   ├── asgi.py
+│   ├── settings.py
+│   ├── urls.py
+│   └── wsgi.py
+├── Dockerfile
+├── Gobuster
+│   ├── __init__.py
+│   ├── admin.py
+│   ├── apps.py
+│   ├── models.py
+│   ├── tests.py
+│   ├── urls.py
+│   └── views.py
+├── LICENSE
+├── ZeroVuln
+│   ├── __init__.py
+│   ├── admin.py
+│   ├── apps.py
+│   ├── migrations
+│   │   └── __init__.py
+│   ├── models.py
+│   ├── tests.py
+│   ├── urls.py
+│   └── views.py
+├── docker-compose.yaml
+├── manage.py
+├── nmap_scan.log
+├── requirements.txt
+└── wordlist
+    └── common.txt
+```
 
 ---
 
